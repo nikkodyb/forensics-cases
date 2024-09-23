@@ -8,6 +8,7 @@ Welcome to my collection of digital forensics challenges and case studies. Here 
 
 ### Projects
 - [Rhino Hunt Case](./challenges/rhino-hunt/README.md)
+- [Dump Me Case](./challenges/memory-forensics/dump-me/README.md)
 
 ### Tools and Guides
 - [Autopsy Guide](./tools/autopsy-guide.md)
