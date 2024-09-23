@@ -8,6 +8,17 @@ September 2024
 
 ---
 
+## Evidence and Resources
+
+The forensic image files and network logs for this case can be found at the following official source:
+
+### [Rhino Hunt Files and Tasks](https://cfreds-archive.nist.gov/dfrws/Rhino_Hunt.html)
+
+- **Download the image files and network logs** from the provided link.
+- **Reference**: The tasks and evidence files located on this page are used in this case study.
+  
+---
+
 ## Case Overview
 
 This case involves an investigation into the illegal possession and trafficking of rhinoceros images. The city of New Orleans passed a law in 2004 making the possession of nine or more unique rhinoceros images a serious crime. The suspect in this case was flagged by network monitoring software at the University of New Orleans for suspicious activity.
