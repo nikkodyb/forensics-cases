@@ -1,4 +1,4 @@
-# Expert Forensic Report: Rhino Hunt Case
+# Forensic Report: Rhino Hunt Case
 
 **Requested by:**  
 New Orleans Police Department
@@ -13,7 +13,7 @@ September 2024
 
 ## Introduction
 
-In 2004, the city of New Orleans passed a law making the possession of nine or more unique rhinoceros images a serious crime. The network administrator at the University of New Orleans flagged illegal rhino image traffic through their monitoring system, RHINOVORE, leading to the seizure of a USB key from one of the University’s labs. The USB key was imaged, and the network administrator also provided three network traces linked to the machine that had a missing hard drive. The main suspect is a Ph.D. student who had been using the University computer since 1972.
+In 2004, the city of New Orleans passed a law making the possession of nine or more unique rhinoceros images a serious crime. The network administrator at the University of New Orleans flagged illegal rhino image traffic through their monitoring system, RHINOVORE, leading to the seizure of a USB key from one of the Universityâ€™s labs. The USB key was imaged, and the network administrator also provided three network traces linked to the machine that had a missing hard drive. The main suspect is a Ph.D. student who had been using the University computer since 1972.
 
 This report presents the findings from the forensic analysis of the USB key image and network traces, reconstructing the suspect's activities and potentially retrieving evidence that connects to illegal rhino image trafficking.
 
@@ -57,7 +57,7 @@ This entry directly links Jeremy as the person who provided the suspect with the
 
 ### 2. **What is the username/password for the account?**
 
-Analysis of the network logs (`rhino.log`) revealed that the suspect logged into the University’s server using the following credentials:
+Analysis of the network logs (`rhino.log`) revealed that the suspect logged into the Universityâ€™s server using the following credentials:
 
 - **Username:** `gnome`  
 - **Password:** `gnome123`
@@ -70,13 +70,13 @@ These credentials were used in both FTP and Telnet sessions by the suspect to tr
 
 Using **Wireshark**, the following file transfers were identified in the network logs:
 
-- **rhino1.jpg** – Transferred via FTP
-- **rhino3.jpg** – Transferred via FTP
-- **contraband.zip** – A password-protected ZIP file containing `rhino2.jpg`.
+- **rhino1.jpg** â€“ Transferred via FTP
+- **rhino3.jpg** â€“ Transferred via FTP
+- **contraband.zip** â€“ A password-protected ZIP file containing `rhino2.jpg`.
 
 ![FTP File Transfer](./images/wireshark_ftp_file_transfer.png)
 
-The logs showed that the suspect uploaded these files from the University’s network. The `contraband.zip` file was crucial, as it contained one of the illegal rhino images, `rhino2.jpg`.
+The logs showed that the suspect uploaded these files from the Universityâ€™s network. The `contraband.zip` file was crucial, as it contained one of the illegal rhino images, `rhino2.jpg`.
 
 ### 4. **What happened to the hard drive in the computer? Where is it now?**
 
@@ -118,7 +118,7 @@ Using **Autopsy**, the following files were recovered from the USB key image:
   - `gumbo2.txt`
 
 - **Document:**
-  - `f0334472.doc` – A key file containing the suspect’s diary entry, which provided insight into the destruction of the hard drive and the attempt to reformat the USB key.
+  - `f0334472.doc` â€“ A key file containing the suspectâ€™s diary entry, which provided insight into the destruction of the hard drive and the attempt to reformat the USB key.
 
 Additionally, **Steghide** was used to determine that some of the recovered images had steganographic potential. These images could hide small amounts of data (5 - 23.1 kB), but further analysis was not conducted to extract hidden content.
 
@@ -139,14 +139,14 @@ By analyzing the network logs, the following timeline was reconstructed:
 - **26/04/2004 16:42:** Packet capture from `rhino.log` begins.
 - **16:59:** The suspect uploads `rhino1.jpg` and `rhino3.jpg` via FTP.
 - **17:59:** The suspect uploads `contraband.zip` containing `rhino2.jpg`.
-- **28/04/2004 15:50:** Packet capture from `rhino2.log` begins. The suspect downloads `rhino4.jpg` and `rhino5.gif` from the University’s server.
-- **15:51:** The suspect downloads `rhino.exe` from the University’s server, potentially to manage or hide the illegal images.
+- **28/04/2004 15:50:** Packet capture from `rhino2.log` begins. The suspect downloads `rhino4.jpg` and `rhino5.gif` from the Universityâ€™s server.
+- **15:51:** The suspect downloads `rhino.exe` from the Universityâ€™s server, potentially to manage or hide the illegal images.
 
 ---
 
 ## Conclusion
 
-This forensic investigation uncovered a wealth of evidence linking the suspect to illegal rhinoceros image trafficking. Despite attempts to destroy evidence by reformatting the USB key and discarding the hard drive, several rhinoceros images and incriminating documents were recovered. Additionally, network traffic logs confirmed the suspect's involvement in the transfer and possession of illegal files using the University’s computer network.
+This forensic investigation uncovered a wealth of evidence linking the suspect to illegal rhinoceros image trafficking. Despite attempts to destroy evidence by reformatting the USB key and discarding the hard drive, several rhinoceros images and incriminating documents were recovered. Additionally, network traffic logs confirmed the suspect's involvement in the transfer and possession of illegal files using the Universityâ€™s computer network.
 
 All nine rhinoceros images were successfully recovered from the evidence, providing substantial proof of the suspect's illegal activities.
 
