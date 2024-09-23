@@ -29,6 +29,10 @@ Evidence analyzed includes:
 
 ---
 
+[Forensic Report: Rhino Hunt Case](https://github.com/your-username/your-repo-name/blob/main/path-to-your-report)
+
+---
+
 ## Key Findings
 
 ### 1. Who gave the accused a telnet/FTP account?
