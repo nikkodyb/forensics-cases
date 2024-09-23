@@ -41,7 +41,6 @@ The following tools were used during the forensic analysis:
 - **Wireshark**: For packet capture analysis and extraction of relevant files from network traces.
 - **Autopsy**: Forensic analysis of the USB key image to recover files.
 - **fcrackzip**: Password cracking tool to recover files from password-protected ZIP archives.
-- **Steghide**: Steganography detection tool used to check images for hidden data.
 
 ---
 
@@ -120,9 +119,6 @@ Using **Autopsy**, the following files were recovered from the USB key image:
 - **Document:**
   - `f0334472.doc` – A key file containing the suspect’s diary entry, which provided insight into the destruction of the hard drive and the attempt to reformat the USB key.
 
-Additionally, **Steghide** was used to determine that some of the recovered images had steganographic potential. These images could hide small amounts of data (5 - 23.1 kB), but further analysis was not conducted to extract hidden content.
-
-![Steghide Analysis](./images/steghide_analysis.png)
 
 ### ZIP File Analysis
 
