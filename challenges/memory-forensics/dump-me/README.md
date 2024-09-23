@@ -10,6 +10,7 @@ Volatility Plugins Overview
 
 Volatility is a powerful memory forensics tool that allows investigators to extract artifacts and analyze memory dumps. The following plugins were used to answer the challenge questions:
 Challenge Questions and Solutions
+
 1. What is the SHA1 hash of the memory dump?
 
 We computed the SHA1 hash to ensure the integrity of the memory image. In forensic investigations, validating the hash helps verify that the file has not been tampered with.
@@ -34,6 +35,7 @@ Command:
 vol.py -f Triage-Memory.mem imageinfo
 
 Profile: Win7SP1x64
+
 3. What was the process ID (PID) of notepad.exe?
 
 The pslist plugin lists the processes running on the system at the time of the memory dump.
@@ -46,6 +48,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 pslist | grep "notepad"
 
 PID: 3032
+
 4. Name the child process of wscript.exe.
 
 The pstree plugin displays the parent-child relationship of processes, making it easier to trace how processes are spawned and their lineage.
@@ -58,6 +61,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 pstree | grep "wscript.exe"
 
 Child Process: UWkpjFjDzM.exe
+
 5. What was the IP address of the machine at the time the RAM dump was created?
 
 The netscan plugin scans the memory dump for active and closed network connections. This is useful for detecting lateral movement, exfiltration, or C2 communications.
@@ -70,6 +74,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 netscan
 
 Local IP: 10.0.0.101
+
 6. What is the IP address of the attacker?
 
 By correlating the process responsible for the malware (UWkpjFjDzM.exe) with the network connections, I identified the attacker's IP address.
@@ -80,6 +85,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 netscan | grep "UWkpjFjDzM.exe"
 
 Attacker IP: 10.0.0.106
+
 7. How many processes are associated with VCRUNTIME140.dll?
 
 The dlllist plugin lists all loaded dynamic-link libraries (DLLs) in the system. It’s useful for identifying malicious or suspicious libraries loaded by processes.
@@ -92,6 +98,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 dlllist | grep "VCRUNTIME140.dll" | wc -l
 
 Processes with VCRUNTIME140.dll: 7
+
 8. What is the MD5 hash of the dumped infected process?
 
 The procdump plugin allows you to dump the memory of a specific process, which can then be further analyzed with tools or hash-checked against known malware.
@@ -105,6 +112,7 @@ vol.py -f Triage-Memory.mem --profile=Win7SP1x64 procdump --pid 3496 -D .
 md5sum executable.3496.exe
 
 MD5: 690ea20bc3bdfb328e23005d9a80c290
+
 9. What is the LM hash of Bob’s account?
 
 The hashdump plugin retrieves password hashes from the memory image, including LM (LanMan) and NTLM hashes. These hashes can be cracked to obtain plaintext passwords.
@@ -117,6 +125,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 hashdump | grep "Bob"
 
 LM Hash: aad3b435b51404eeaad3b435b51404ee
+
 10. What memory protection constants does the VAD node at 0xfffffa800577ba10 have?
 
 The vadinfo plugin provides details about the Virtual Address Descriptor (VAD) nodes that track memory allocation by processes.
@@ -129,6 +138,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 vadinfo | grep "0xfffffa800577ba10"
 
 Memory Protection: PAGE_READONLY
+
 11. What memory protection did the VAD at 0x00000000033c0000 have?
 
 Similar to the previous question, I used vadinfo to inspect the memory protection for this specific address range.
@@ -139,6 +149,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 vadinfo | grep "0x00000000033c0000"
 
 Memory Protection: PAGE_NOACCESS
+
 12. What is the name of the VBS script that ran on the machine?
 
 The cmdline plugin reveals the command-line arguments passed to processes at the time they were launched, which can be useful to identify scripts or malware.
@@ -151,6 +162,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 cmdline | grep ".vbs"
 
 Script: vhjReUDEuumrX.vbs
+
 13. What application was run at 2019-03-07 23:06:58 UTC?
 
 The shimcache plugin analyzes the Application Compatibility Cache (Shimcache), which records the execution of applications on the system, even if they no longer exist on disk.
@@ -163,6 +175,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 shimcache | grep "2019-03-07 23:06:58"
 
 Application: Skype.exe
+
 14. What was written in notepad.exe at the time of the memory capture?
 
 The memdump plugin extracts the memory of a process, which can then be searched for relevant information using tools like strings.
@@ -176,6 +189,7 @@ vol.py -f Triage-Memory.mem --profile=Win7SP1x64 memdump -p 3032 -D .
 strings -e l 3032.dmp | grep "flag<"
 
 Flag: <REDBULL_IS_LIFE>
+
 15. What is the short name of the file at record 59045?
 
 The mftparser plugin parses the Master File Table (MFT) from NTFS, which contains details about files, such as their short and long names.
@@ -188,6 +202,7 @@ Command:
 vol.py -f Triage-Memory.mem --profile=Win7SP1x64 mftparser | grep "59045"
 
 Short Name: EMPLOY~1.XLS
+
 16. What is the infected PID of the Meterpreter malware?
 
 By using pstree and analyzing the process list, I identified a suspicious process named UWkpjFjDzM.exe (PID 3496). Further analysis confirmed this was the infected process.
