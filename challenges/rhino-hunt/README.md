@@ -26,12 +26,12 @@ In the document `f0334472.doc` recovered from the USB image, the suspect mention
 
 ---
 
-### 2. What’s the username/password for the account?
+### 2. Whatâ€™s the username/password for the account?
 
 - **Username:** `gnome`  
 - **Password:** `gnome123`
 
-The credentials were used to log in via FTP and Telnet on the University’s server.
+The credentials were used to log in via FTP and Telnet on the Universityâ€™s server.
 
 ---
 
@@ -71,7 +71,7 @@ Using forensic tools, the following files were recovered from the USB image (`RH
   - `gumbo2.txt` (another recipe)
 
 - **Documents:**
-  - `f0334472.doc` (a key file with the suspect’s notes)
+  - `f0334472.doc` (a key file with the suspectâ€™s notes)
 
 ---
 
@@ -114,6 +114,4 @@ The forensic investigation provided strong evidence linking the suspect to illeg
 
 ---
 
-**Prepared by**: Nikolai Holmen Dyb  
-Digital Forensic Analyst  
-Kristiansand, Norway
+**Prepared by**: Nikolai Holmen Dyb
