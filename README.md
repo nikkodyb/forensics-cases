@@ -11,5 +11,6 @@ Welcome to my collection of digital forensics challenges and case studies. Here 
 - [Dump Me Case](./challenges/memory-forensics/dump-me/README.md)
 
 ### Tools and Guides
+- Volatility 
 - [Autopsy Guide](./tools/autopsy-guide.md)
 - [Wireshark Guide](./tools/wireshark-guide.md)
