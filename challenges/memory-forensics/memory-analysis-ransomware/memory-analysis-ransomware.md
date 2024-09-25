@@ -16,42 +16,6 @@ To install Volatility, you can visit the official download page:
 
 - [Volatility Releases](https://www.volatilityfoundation.org/releases)
 
-### Useful Volatility Commands
-
-Here are some of the core Volatility commands used during the investigation:
-
-1. **Identify OS profile:**
-   ```bash
-   volatility -f memory.vmem imageinfo
-   ```
-2. **List running processes:**
-   ```bash
-   volatility -f memory.vmem pslist
-   ```
-3. **Scan for all processes (including hidden or terminated):**
-   ```bash
-   volatility -f memory.vmem psscan
-   ```
-4. **Display parent-child relationships between processes:**
-   ```bash
-   volatility -f memory.vmem pstree
-   ```
-5. **Check for hidden processes:**
-   ```bash
-   volatility -f memory.vmem psxview
-   ```
-6. **Scan for network connections:**
-   ```bash
-   volatility -f memory.vmem connscan
-   ```
-7. **Dump process executable:**
-   ```bash
-   volatility -f memory.vmem procdump -p <PID> --dump-dir
-   ```
-8. **Scan for files in memory:**
-   ```bash
-   volatility -f memory.vmem filescan
-   ```
 
 ## Investigation Process
 
