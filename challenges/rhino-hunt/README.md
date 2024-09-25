@@ -4,7 +4,6 @@
 Nikolai Holmen Dyb
 
 **Date:**  
-September 2024
 
 ---
 

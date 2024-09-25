@@ -7,7 +7,6 @@ New Orleans Police Department
 Nikolai Holmen Dyb
 
 **Date:**  
-September 2024
 
 ---
 

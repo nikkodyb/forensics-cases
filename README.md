@@ -9,8 +9,9 @@ Welcome to my collection of digital forensics challenges and case studies. Here 
 ### Projects
 - [Rhino Hunt Case](./challenges/rhino-hunt/README.md)
 - [Dump Me Case](./challenges/memory-forensics/dump-me/README.md)
+- [Memory Analysis Ransomware](./challenges/memory-forensics/memory-analysis-ransomware/memory-analysis-ransomware.md)
 
 ### Tools and Guides
-- Volatility 
+- [Volatility](./tools/volatility-guide.md)
 - [Autopsy Guide](./tools/autopsy-guide.md)
 - [Wireshark Guide](./tools/wireshark-guide.md)
